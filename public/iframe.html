@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<style>#flash-container,body{width:100%;height:100%;margin:0}body{background-color:#000}#client-ui{height:100%}#flash-container{position:absolute;left:0;right:0;top:0;bottom:0;overflow:hidden}</style>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/swfobject/2.2/swfobject.min.js"></script>
+    <script type="text/javascript">
+        window.FlashExternalInterface= window.FlashExternalInterface || window.top.FlashComponent;
+		window.top.flashvars = {
+            "external.texts.txt":"http:\/\/localhost\/gamedata\/external_flash_texts.txt",
+            "connection.info.port":"30002",
+            "furnidata.load.url":"http:\/\/localhost\/gamedata\/furnidata.txt",
+			"client.allow.cross.domain" : "1", 
+			"client.notify.cross.domain" : "0", 
+            "external.variables.txt":"http:\/\/localhost\/gamedata\/external_variables.txt",
+            "external.override.variables.txt":"http:\/\/localhost\/gamedata\/v2.txt",
+            "client.allow.cross.domain":"1",
+            "url.prefix":"http:\/\/localhost",
+            "external.figurepartlist.txt":"http:\/\/localhost\/gamedata\/sergiodataim.xml",
+            "flash.client.origin":"popup",
+            "client.starting":"\u00A1Por favor, espera! Habbo se est\u00E1 cargando",
+            "camera.upload.url":"http://atlantapictures.net/uploadpicture/haddoz/8bfa4d002b83bcf64ab9b1485d94d39d40ceb4e4f173e989?auth=hd",
+            "camera.thum.upload.url":"http://localhost/uploadlol.php?hotel=ha2&roomId=",
+            "camera.hotel":"pebe",
+            "processlog.enabled":"1",
+            "has.identity":"1",
+            "productdata.load.url":"http:\/\/localhost\/gamedata\/productdata.txt",
+            "client.starting.revolving":"Para ciencia, \u00A1T\u00FA, monstruito!\/Cargando mensajes divertidos... Por favor, espera.\/\u00BFTe apetecen salchipapas con qu\u00E9?\/Sigue al pato amarillo.\/El tiempo es s\u00F3lo una ilusi\u00F3n.\/\u00A1\u00BFTodav\u00EDa estamos aqu\u00ED?!\/Me gusta tu camiseta.\/Mira a la izquierda. Mira a la derecha. Parpadea dos veces. \u00A1Ta-ch\u00E1n!\/No eres t\u00FA, soy yo.\/Shhh! Estoy intentando pensar.\/Cargando el universo de p\u00EDxeles.",
+            "spaweb":"1",
+            "connection.info.host":"localhost",
+            "sso.ticket":"209344-812612227331326309930",
+            "client.notify.cross.domain":"0",
+            "account_id":"1",
+            "flash.client.url":"\/\/localhost\/gordon\/PRODUCTION-202003262139-739075797\/",
+            "unique_habbo_id":"hhes-d3d0372477990e799781f83e8c5b6047",
+			"swf.url": "\/\/localhost\/gordon\/PRODUCTION-202003262139-739075797\/habbo.swf?<?php echo time(); ?>",
+        };
+	
+    </script>
+    <script type="text/javascript">
+        var params = {
+			"base" : window.top.flashvars["flash.client.url"],
+            "allowScriptAccess" : "always",
+            "menu" : "false",
+			"bgcolor" : "#000",
+			"wmode" : "opaque" 
+        };
+		//Habboz.swf
+        swfobject.embedSWF(window.top.flashvars["swf.url"], 'flash-container', '100%', '100%', '11.1.0', '//localhost/habboweb/63_1d5d8853040f30be0cc82355679bba7c/10138/web-gallery/flash/expressInstall.swf', window.top.flashvars, params, null, null);
+		
+        window.addEventListener('load', () => window.top.FlashInterface.start(document.getElementById("flash-container")));
+        window.addEventListener('keydown', (ev) => {window.top.FlashInterface.handleKeyDown(ev)});
+	</script>
+</head>
+<body>
+<div id="client-ui">
+    <div id="flash-wrapper">
+        <div id="flash-container">
+            <div id="content" style="width: 400px; margin: 20px auto 0 auto; display: none">
+                <p>FLASH NOT INSTALLED</p>
+                <p><a href="http://www.adobe.com/go/getflashplayer"><img src="//habboo-a.akamaihd.net/habboweb/63_1d5d8853040f30be0cc82355679bba7c/10138/web-gallery/v2/images/client/get_flash_player.gif" alt="Get Adobe Flash player" /></a></p>
+            </div>
+        </div>
+    </div>
+    <div id="content" class="client-content"></div>
+    <iframe id="page-content" class="hidden" allowtransparency="true" frameBorder="0" src="about:blank"></iframe>
+</div>
+<iframe id="conversion-tracking" src="about:blank" width="0" height="0" frameborder="0" scrolling="no" marginwidth="0" marginheight="0" style="position: absolute; top:0; left:0"></iframe>
+
+</body>
+</html>
